@@ -1,0 +1,43 @@
+{
+  "name": "ddddocr-mcp-server",
+  "version": "1.0.0",
+  "description": "A powerful MCP server for CAPTCHA recognition using ddddocr - supporting text OCR, object detection, and slider matching",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --loader tsx/esm src/index.ts",
+    "start": "node dist/index.js",
+    "test": "python3 test_mcp_server.py"
+  },
+  "keywords": [
+    "mcp",
+    "captcha",
+    "ocr",
+    "ddddocr",
+    "verification",
+    "computer-vision",
+    "ai"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "tsx": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ddddocr-mcp-server.git"
+  },
+  "mcp": {
+    "server": {
+      "name": "ddddocr",
+      "description": "Advanced CAPTCHA recognition service with OCR, object detection and slider matching capabilities",
+      "version": "1.0.0"
+    }
+  }
+} 
