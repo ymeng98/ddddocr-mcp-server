@@ -22,7 +22,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/ddddocr-mcp-server.git
+git clone https://github.com/ymeng98/ddddocr-mcp-server.git
 cd ddddocr-mcp-server
 
 # 安装依赖
