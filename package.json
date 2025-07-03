@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "node --loader tsx/esm src/index.ts",
-    "start": "node dist/index.js",
+    "start": "python3 ddddocr_mcp_server.py",
+    "start:node": "node dist/index.js",
     "test": "python3 test_mcp_server.py"
   },
   "keywords": [

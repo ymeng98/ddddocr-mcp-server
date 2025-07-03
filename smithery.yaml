@@ -1,0 +1,63 @@
+name: ddddocr-mcp-server
+version: "1.0.0"
+description: "A powerful MCP server for CAPTCHA recognition using ddddocr"
+
+build:
+  type: docker
+  dockerfile: Dockerfile
+  context: .
+
+server:
+  type: mcp
+  command: ["python3", "ddddocr_mcp_server.py"]
+  environment:
+    - PYTHONUNBUFFERED=1
+    - NODE_ENV=production
+
+resources:
+  memory: 1024MB
+  cpu: 0.5
+
+healthcheck:
+  enabled: true
+  path: /health
+  interval: 30s
+  timeout: 10s
+  retries: 3
+
+capabilities:
+  - image_processing
+  - ocr
+  - captcha_recognition
+  - object_detection
+
+tags:
+  - captcha
+  - ocr
+  - ddddocr
+  - mcp
+  - computer-vision
+  - verification
+
+documentation:
+  readme: README.md
+  examples:
+    - name: "OCR Recognition"
+      description: "Recognize text from CAPTCHA images"
+      code: |
+        {
+          "tool": "ocr_recognize",
+          "arguments": {
+            "image_base64": "your_base64_encoded_image"
+          }
+        }
+    - name: "Slider Matching"
+      description: "Match slider CAPTCHA position"
+      code: |
+        {
+          "tool": "match_slider", 
+          "arguments": {
+            "target_base64": "target_image_base64",
+            "background_base64": "background_image_base64"
+          }
+        } 
