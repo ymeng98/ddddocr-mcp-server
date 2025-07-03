@@ -1,5 +1,5 @@
 {
-  "name": "ddddocr-mcp-server",
+  "name": "ddddocr-captcha-recognition-ymeng98",
   "version": "1.0.0",
   "description": "A powerful MCP server for CAPTCHA recognition using ddddocr - supporting text OCR, object detection, and slider matching",
   "main": "dist/index.js",
